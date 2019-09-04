@@ -17,10 +17,8 @@ class _TransactionInputState extends State<TransactionInput> {
 
   @override
   void initState() {
-    setState(() {
-      _selectedDate = DateTime.now();
-    });
     super.initState();
+    _selectedDate = DateTime.now();
   }
 
   void _openDatePicker() {
