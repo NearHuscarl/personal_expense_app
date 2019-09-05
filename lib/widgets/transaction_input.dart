@@ -63,12 +63,12 @@ class _TransactionInputState extends State<TransactionInput> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               TextField(
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: const InputDecoration(labelText: 'Title'),
                 controller: _titleController,
                 onSubmitted: (_) => _onSubmit(),
               ),
               TextField(
-                decoration: InputDecoration(labelText: 'Amount'),
+                decoration: const InputDecoration(labelText: 'Amount'),
                 controller: _amountController,
                 keyboardType: TextInputType.number,
                 onSubmitted: (_) => _onSubmit(),
@@ -83,7 +83,7 @@ class _TransactionInputState extends State<TransactionInput> {
                     ),
                     FlatButton(
                       textColor: Theme.of(context).primaryColor,
-                      child: Text(
+                      child: const Text(
                         'Choose Date',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -95,7 +95,7 @@ class _TransactionInputState extends State<TransactionInput> {
                 ),
               ),
               RaisedButton(
-                child: Text('Add transaction'),
+                child: const Text('Add transaction'),
                 color: Theme.of(context).primaryColor,
                 textColor: Theme.of(context).buttonColor,
                 onPressed: _onSubmit,

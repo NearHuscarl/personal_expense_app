@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             ),
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
-                title: TextStyle(
+                title: const TextStyle(
                   fontFamily: 'OpenSans',
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Show chart'),
+          const Text('Show chart'),
           Switch.adaptive(
             activeColor: Theme.of(context).accentColor, // for iOS only
             value: _showChart,
@@ -146,10 +146,10 @@ class _MyHomePageState extends State<MyHomePage> {
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
     final isPortrait = !isLandscape;
     final appBar = AppBar(
-      title: Text('Personal Expenses'),
+      title: const Text('Personal Expenses'),
       actions: [
         IconButton(
-          icon: Icon(Icons.add),
+          icon: const Icon(Icons.add),
           onPressed: () => _startAddNewTransaction(context),
         ),
       ],
@@ -187,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: Platform.isIOS
           ? Container()
           : FloatingActionButton(
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
               onPressed: () => _startAddNewTransaction(context),
             ),
     );

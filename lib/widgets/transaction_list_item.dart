@@ -6,7 +6,7 @@ class TransactionListItem extends StatelessWidget {
   final Transaction transaction;
   final Function deleteTransaction;
 
-  TransactionListItem({
+  const TransactionListItem({
     @required this.transaction,
     @required this.deleteTransaction,
   });
@@ -15,7 +15,7 @@ class TransactionListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 5,
-      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
       child: ListTile(
         leading: CircleAvatar(
           radius: 30,
@@ -24,7 +24,7 @@ class TransactionListItem extends StatelessWidget {
             child: FittedBox(
               child: Text(
                 '\$${transaction.amount.toStringAsFixed(2)}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -37,17 +37,17 @@ class TransactionListItem extends StatelessWidget {
         ),
         subtitle: Text(
           DateFormat.yMMMd().format(transaction.date),
-          style: TextStyle(fontSize: 12),
+          style: const TextStyle(fontSize: 12),
         ),
         trailing: MediaQuery.of(context).size.width > 500
             ? FlatButton.icon(
                 textColor: Theme.of(context).errorColor,
-                icon: Icon(Icons.delete),
-                label: Text('Delete'),
+                icon: const Icon(Icons.delete),
+                label: const Text('Delete'),
                 onPressed: () => deleteTransaction(transaction.id),
               )
             : IconButton(
-                icon: Icon(Icons.delete),
+                icon: const Icon(Icons.delete),
                 color: Theme.of(context).errorColor,
                 onPressed: () => deleteTransaction(transaction.id),
               ),
