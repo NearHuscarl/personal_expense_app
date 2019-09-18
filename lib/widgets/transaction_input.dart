@@ -21,6 +21,13 @@ class _TransactionInputState extends State<TransactionInput> {
     _selectedDate = DateTime.now();
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    _titleController.dispose();
+    _amountController.dispose();
+  }
+
   void _openDatePicker() {
     showDatePicker(
       context: context,
